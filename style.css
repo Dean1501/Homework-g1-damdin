@@ -1,0 +1,40 @@
+body {
+    background: radial-gradient(rgb(160, 150, 160) 0%, transparent 20%, rgb(27, 10, 8) 70%);
+    background-position: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    display: inline-block;
+    text-align: center;
+    height: 90vh;
+    width: 32%;
+    background-color: rgb(216, 147, 105);
+    border-radius: 70px;
+}
+
+@media all and (max-width: 450px) {
+    main {
+      width: 100%;
+    }
+      aside {
+          width: 100%;
+      }
+  }
