@@ -24,8 +24,7 @@ h1 {
 .box {
     display: inline-block;
     text-align: center;
-    height: 90vh;
-    width: 32%;
+    height: 100%;
     background-color: rgb(216, 147, 105);
     border-radius: 70px;
 }
@@ -43,6 +42,6 @@ h1 {
 
 @media screen and (min-width: 451px) and (max-width: 1440px) {
     .box {
-        width: 100%;
+        width: 32%;
     }
 }
