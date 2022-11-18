@@ -31,10 +31,16 @@ h1 {
 }
 
 @media all and (max-width: 450px) {
-    main {
+    .box {
       width: 100%;
     }
       aside {
           width: 100%;
       }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .box {
+      width: 960px;
+    }
   }
