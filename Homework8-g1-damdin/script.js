@@ -22,7 +22,7 @@ let sandwichDiscountPrice = sandwich.price - (sandwich.price * (sandwich.discoun
 let buuzaDiscountPrice = buuza.price - (buuza.price * (buuza.discount / 100));
 alert(`Купи Бууза-комбо и получи фришку со скидкой всего за ${frenchFries.price - (frenchFries.price * (frenchFries.discount / 100))} p.`);
 menu.pop(); // Удаление буузы из меню
-buuza.ingridients.shift(`Баранина`); // Удаление баранины из рецепта бууз
+buuza.ingridients.shift(); // Удаление баранины из рецепта бууз
 alert(JSON.stringify(menu));
 menu.unshift(buuza); // Добаление буузы в начало меню
 alert(JSON.stringify(menu));
