@@ -15,7 +15,7 @@ let buuza = {
     ingridients: ['Баранина', "Говядина", "Свинина", "Лук", "Соль", "Перец", "Мука", "Вода", "Соль",],
     price: 55,
     discount: 15,
-}
+};
 let menu = [frenchFries, sandwich, buuza]
 let frenchFriesDiscountPrice = frenchFries.price - (frenchFries.price * (frenchFries.discount / 100));
 let sandwichDiscountPrice = sandwich.price - (sandwich.price * (sandwich.discount / 100));

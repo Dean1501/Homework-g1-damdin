@@ -1,16 +1,144 @@
-let zadacha1 = prompt(`У Пети, Насти и Леши по 5 яблок. Сколько яблок всего у них вместе?`);
-let answer1 = (zadacha1 == 15) ? alert(`Правильно! Возьми печеньку!`) : alert(`Подумай еще. У тебя все получится!`);
+//1. четные числа:
+for (let i = 2; i <= 10; i += 2) {
 
-let zadacha2 = prompt(`Дон Ягон имеет поместье. Его дом стоит 45000$, мебель 15000$, картины 100000$, лошади - 5000$. Сколько стоит все его имущество?`);
-if (zadacha2 == 165000) {
-    alert('А ты хорош!');
-} else if (zadacha2 != 165000) {
-    alert('Ничего страшного! Ты еще покажешь на что способен!');
+    do {
+        alert(i);
+        i += 2;
+    }
+    while (i <= 10);
+
+};
+//2. прерывание на пятом шаге
+let five = 0;
+while (true) {
+    alert(five);
+    if (five === 5) {
+        break;
+    }
+    five++;
 };
 
-let age = prompt(`Сколько тебе лет?`);
-if (age >= 10) {
-    alert('Теперь понятно почему ты так хорошо считаешь!');
-} else if (age <= 10) {
-    alert('Ты очень способный! Учись хорошо и слушайся маму!')
+//3. массив блюд как в 8 задании
+let potato = {
+    name: 'Картофель',
+    qty: 100,
+    price: 15,
+    sebes: 5,
+};
+let bread = {
+    name: 'хлеб',
+    qty: 10,
+    price: 3,
+    sebes: 1,
+};
+let sausage = {
+    name: 'колбаса',
+    qty: 10,
+    price: 15,
+    sebes: 5,
+};
+let mayo = {
+    name: 'майонез',
+    qty: 1,
+    price: 3,
+    sebes: 1,
+};
+let mutton = {
+    name: 'баранина',
+    qty: 10,
+    price: 15,
+    sebes: 5
+};
+let beef = {
+    name: 'говядина',
+    qty: 10,
+    price: 15,
+    sebes: 5,
+};
+let pork = {
+    name: 'свинина',
+    qty: 10,
+    price: 15,
+    sebes: 5,
+};
+let flour = {
+    name: 'мука',
+    qty: 10,
+    price: 3,
+    sebes: 1,
+};
+let onion = {
+    name: 'лук',
+    qty: 10,
+    price: 3,
+    sebes: 1,
+};
+let water = {
+    name: 'вода',
+    qty: 10,
+    price: 1,
+    sebes: 1,
+};
+let salt = {
+    name: 'соль',
+    qty: 1,
+    price: 1,
+    sebes: 1,
+};
+let pepper = {
+    name: 'перец',
+    qty: 1,
+    price: 1,
+    sebes: 1,
+};
+let ingredientCost = {
+    potato: 15,
+    bread: 3,
+    sausage: 15,
+    mayo: 3,
+    mutton: 15,
+    beef: 15,
+    pork: 15,
+    flour: 3,
+    onion: 3,
+    water: 1,
+    salt: 1,
+    pepper: 1,
+};
+
+let frenchFries = {
+    name: 'Фришка',
+    ingridients: ["potato", "salt",],
+    price: 100,
+    discount: 15,
+};
+let sandwich = {
+    name: "Бутерброд",
+    ingridients: ["bread", "sausage", "mayo",],
+    price: 50,
+    discount: 15,
+};
+let buuza = {
+    name: "Бууза",
+    ingridients: ["mutton", "beef", "pork", "onion", "salt", "pepper", "flour", "water", "salt",],
+    price: 55,
+    discount: 15,
+};
+
+//let ingredients = { potato, bread, sausage, mayo, mutton, beef, pork, flour, onion, water, salt, pepper, }
+
+let menu = { frenchFries, sandwich, buuza, };
+
+let wholecost = 0;
+for (let i = 0; i < menu.length; i++) {
+    let cost = 0;
+    const ingredients = menu[i].ingredients;
+
+    for (let j = 0; j < ingredients.length; j++) {
+        let ingredientName = ingredients[j];
+        let ingredientCost = ingredientsCost[ingredientName];
+        cost += ingredientCost;
+    };
+    menu[i].cost = cost;
+    alert(JSON.stringify(menu[i]));
 };
