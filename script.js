@@ -9,7 +9,7 @@ for (let i = 2; i <= 10; i += 2) {
 
 };
 //2. прерывание на пятом шаге
-let five = 0;
+let five = 1;
 while (true) {
     alert(five);
     if (five === 5) {
@@ -91,7 +91,7 @@ let pepper = {
     price: 1,
     sebes: 1,
 };
-let ingredientCost = {
+let ingredientprice = {
     potato: 15,
     bread: 3,
     sausage: 15,
@@ -125,20 +125,18 @@ let buuza = {
     discount: 15,
 };
 
-//let ingredients = { potato, bread, sausage, mayo, mutton, beef, pork, flour, onion, water, salt, pepper, }
-
 let menu = { frenchFries, sandwich, buuza, };
 
-let wholecost = 0;
+let wholeprice = 0;
 for (let i = 0; i < menu.length; i++) {
-    let cost = 0;
+    let price = 0;
     const ingredients = menu[i].ingredients;
 
     for (let j = 0; j < ingredients.length; j++) {
         let ingredientName = ingredients[j];
-        let ingredientCost = ingredientsCost[ingredientName];
-        cost += ingredientCost;
+        let ingredientprice = ingredientsprice[ingredientName];
+        price += ingredientprice;
     };
-    menu[i].cost = cost;
+    menu[i].price = price;
     alert(JSON.stringify(menu[i]));
 };
