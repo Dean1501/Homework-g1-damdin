@@ -1,23 +1,24 @@
-//1. функция на наименьшее число
-let x = +prompt('Введите любое число');
+//1. четные числа:
+for (let i = 2; i <= 10; i += 2) {
 
-let y = +prompt('Введите еще число');
+    do {
+        alert(i);
+        i += 2;
+    }
+    while (i <= 10);
 
-let result = minX(x, y);
-
-alert(`Наименьшее из чисел - ${result}.`);
-
-
-
-function minX(x, y) {
-    if (x < y) {
-        return (x);
-    } else {
-        return (y);
-    };
 };
-//2. функция на вычисление профита блюда
+//2. прерывание на пятом шаге
+let five = 1;
+while (true) {
+    alert(five);
+    if (five === 5) {
+        break;
+    }
+    five++;
+};
 
+//3. массив блюд как в 8 задании
 let ingredientsPrice = {
     potato: 15,
     bread: 3,
@@ -37,16 +38,14 @@ let menu = [
     frenchFries = {
         name: 'frenchFries',
         ingredients: ['potato', 'salt',],
-        price: 50,
     },
     sandwich = {
         name: "sandwich",
-        ingredients: ['bread', 'sausage', 'mayo',], 
-        price: 60,
+        ingredients: ['bread', 'sausage', 'mayo',],
+
     }, buuza = {
         name: "buuza",
         ingredients: ['mutton', 'beef', 'pork', 'onion', 'salt', 'pepper', 'flour', 'water', 'salt',],
-        price: 100,    
     },
 ];
 
@@ -54,15 +53,11 @@ for (let i = 0; i < menu.length; i++) {
     let cost = 0;
     let ingredients = menu[i].ingredients;
 
-    menu[i].profit = profit(ingredients, ingredientsPrice, menu[i].price);
-    alert(JSON.stringify(menu[i]));
-}
-function profit(ingredients, ingredientsPrice, price) {
-    let cost = 0;
     for (let j = 0; j < ingredients.length; j++) {
         let ingredientsName = ingredients[j];
         let ingredientsCost = ingredientsPrice[ingredientsName];
         cost += ingredientsCost;
     };
-    return price - cost;
+    menu[i].cost = cost;
+    alert(JSON.stringify(menu[i]));
 };
