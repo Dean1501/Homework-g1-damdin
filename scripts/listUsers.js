@@ -4,4 +4,4 @@ let listUsers = {
     Damdin: `150192`,
 };
 
-exsport default {listUsers};
+export default {listUsers};
