@@ -1,4 +1,4 @@
-import users from "/scripts/listUsers.js";
+import users from "/listUsers.js";
 alert(JSON.stringify(users));
 
 let login = prompt(`Логин: `);
