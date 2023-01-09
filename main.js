@@ -1,4 +1,4 @@
-import users from "/listUsers.json" assert {type: 'json'};
+import users from "./listUsers.json" assert {type: 'json'};
 
 let login = prompt(`Логин: `);
 let password = prompt(`Пароль: `);
