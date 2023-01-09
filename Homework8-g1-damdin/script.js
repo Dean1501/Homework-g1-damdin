@@ -16,7 +16,7 @@ let buuza = {
     price: 55,
     discount: 15,
 };
-let menu = [frenchFries, sandwich, buuza]
+let menu = [frenchFries, sandwich, buuza];
 let frenchFriesDiscountPrice = frenchFries.price - (frenchFries.price * (frenchFries.discount / 100));
 let sandwichDiscountPrice = sandwich.price - (sandwich.price * (sandwich.discount / 100));
 let buuzaDiscountPrice = buuza.price - (buuza.price * (buuza.discount / 100));
