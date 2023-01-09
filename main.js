@@ -21,15 +21,3 @@ let sebesMenu = menu.index.ingredients.reduce(function (sum) {
 })
 
 alert(sebesMenu);
-// for (let i = 0; i < menu.length; i++) {
-//     let cost = 0;
-//     let ingredients = menu[i].ingredients;
-
-//     for (let j = 0; j < ingredients.length; j++) {
-//         let ingredientsName = ingredients[j];
-//         let ingredientsCost = ingredientsPrice[ingredientsName];
-//         cost += ingredientsCost;
-//     };
-//     menu[i].cost = cost;
-//     alert(JSON.stringify(menu[i]));
-// };
