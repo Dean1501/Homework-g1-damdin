@@ -30,8 +30,18 @@ let buuza = {
 
 let menu = [frenchFries, sandwich, buuza];
 
-let sebesMenu = menu.index.ingredients.reduce(function (sum) {
-    console.log(sebesMenu)
-})
+let sebesFrenchFries = menu.frenchFries.ingredients.reduce(function (total, amount) {
+    return total + amount;
+});
+
+let sebesSandwich = menu.sandwich.ingredients.reduce(function (total, amount) {
+    return total + amount;
+});
+
+let sebesBuuza = menu.buuza.ingredients.reduce(function (total, amount) {
+    return total + amount;
+});
+
+let sebesMenu = sebesFrenchFries + sebesSandwich + sebesBuuza;
 
 alert(sebesMenu);
