@@ -56,7 +56,7 @@ for (let i = 0; i < menu.length; i++) {
 
     menu[i].profit = profit(ingredients, ingredientsPrice, menu[i].price);
     alert(JSON.stringify(menu[i]));
-}
+};
 function profit(ingredients, ingredientsPrice, price) {
     let cost = 0;
     for (let j = 0; j < ingredients.length; j++) {

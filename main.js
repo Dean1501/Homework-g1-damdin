@@ -16,32 +16,39 @@ let ingredientsPrice = {
 let frenchFries = {
     name: "frenchFries",
     ingredients: ["potato", "salt",],
+    price: 50,
 };
 
 let sandwich = {
     name: "sandwich",
     ingredients: ["bread", "sausage", "mayo",],
+    price: 60,
 };
 
 let buuza = {
     name: "buuza",
     ingredients: ["mutton", "beef", "pork", "onion", "salt", "pepper", "flour", "water", "salt",],
+    price: 100,
 };
 
 let menu = [frenchFries, sandwich, buuza];
 
-let sebesFrenchFries = menu.frenchFries.ingredients.reduce(function (total, amount) {
-    return total + amount;
-}, 0);
 
-let sebesSandwich = menu.sandwich.ingredients.reduce(function (total, amount) {
-    return total + amount;
-}, 0);
 
-let sebesBuuza = menu.buuza.ingredients.reduce(function (total, amount) {
-    return total + amount;
-}, 0);
+for (let i = 0; i < menu.length; i++) {
 
-let sebesMenu = sebesFrenchFries + sebesSandwich + sebesBuuza;
+    let sebesMenu = 0;
 
-alert(sebesMenu);
+    let ingredients = menu[i].ingredients;
+
+    menu[i].profit = profit(ingredients, ingredientsPrice, price);
+};
+
+function profit(ingredients, ingredientsPrice, price) {
+
+    let sebesPosition = ingredients.reduce(function (total, amount) {
+        return total + amount;
+    }, 0);
+
+    alert(sebesPosition);
+};
