@@ -1,4 +1,17 @@
-import ingredientsPrice from "./ingredientsPrice.json" assert {type: 'json'};
+let ingredientsPrice = {
+    "potato": 15,
+    "bread": 3,
+    "sausage": 15,
+    "mayo": 3,
+    "mutton": 15,
+    "beef": 15,
+    "pork": 15,
+    "flour": 3,
+    "onion": 3,
+    "water": 1,
+    "salt": 1,
+    "pepper": 1
+};
 
 let frenchFries = {
     name: "frenchFries",
