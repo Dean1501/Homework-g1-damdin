@@ -44,7 +44,7 @@ for (let i = 0; i < menu.length; i++) {
     menu[i].profit = profit(ingredients, ingredientsPrice, price);
 };
 
-function profit(ingredients, ingredientsPrice, price) {
+function profit(ingredients, ingredientsPrice) {
     for (let j = 0; j < ingredients.length; j++) {
     let ingredientsName = ingredients[j];
     let ingredientsCost = ingredientsPrice[ingredientsName];
