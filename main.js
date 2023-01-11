@@ -46,11 +46,14 @@ for (let i = 0; i < menu.length; i++) {
 
 function profit(ingredients, ingredientsPrice) {
     for (let j = 0; j < ingredients.length; j++) {
-    let ingredientsName = ingredients[j];
-    let ingredientsCost = ingredientsPrice[ingredientsName];
+        let ingredientsName = ingredients[j];
+        let ingredientsCost = ingredientsPrice[ingredientsName];
+        ;
+        return ingredientsCost;
+    };
+    
     let sebesPosition = ingredientsCost.reduce(function (total, amount) {
         return total + amount;
-    }, 0);
-
+    }, 0)
     alert(sebesPosition);
-}};
+};
