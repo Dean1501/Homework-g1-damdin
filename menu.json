@@ -11,7 +11,7 @@
     },
     {
         "name": "buuza",
-        "ingredients": ["mutton", "beef", "pork", "onion", "salt", "pepper", "flour", "water", "salt"],
+        "ingredients": ["mutton", "beef", "pork", "onion", "salt", "pepper", "flour", "water"],
         "price": 100 
     }
 ]
