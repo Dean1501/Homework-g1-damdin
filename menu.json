@@ -1,0 +1,17 @@
+[
+    {
+        "name": "frenchFries",
+        "ingredients": ["potato", "salt"],
+        "price": 50
+    },
+    {
+        "name": "sandwich",
+        "ingredients": ["bread", "sausage", "mayo"], 
+        "price": 60
+    },
+    {
+        "name": "buuza",
+        "ingredients": ["mutton", "beef", "pork", "onion", "salt", "pepper", "flour", "water", "salt"],
+        "price": 100 
+    }
+]
