@@ -23,9 +23,11 @@ console.log(costSum);
 
 // 3. 
 
+const nonVeganIng = ["meat", "mutton", "beef", "pork", "sausage", ]
+
 let vegetFood = menu.some(function (menuElem) {
     return menuElem.ingredients.every(function (ingredient) {
-        return ingredient !== "meat" & ingredient !== "mutton" & ingredient !== "beef" & ingredient !== "pork" & ingredient !== "sausage";
+        return !nonVeganIng.includes(ingredient);
     });
 });
 console.log(vegetFood);
