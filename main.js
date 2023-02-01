@@ -2,6 +2,8 @@ import menu from "./menu.json" assert {type: 'json'};
 import ingredientsPrice from "./ingredientsPrice.json" assert {type: 'json'};
 
 // 1.
+console.log(`Перепишите цикл, который считает себестоимость блюда из прошлых заданий на функцию, которая использует "reduce"`);
+
 menu.forEach(function (element) {
     let costPrice = element.ingredients.reduce(function (sum, item) {
         return sum + ingredientsPrice[item]
@@ -10,6 +12,8 @@ menu.forEach(function (element) {
 });
 
 // 2. 
+
+console.log(`Запишите в каждое блюдо себестоимость, используя "map" и функцию из первого задания.`)
 
 let costSum = menu.map(function (menuItem) {
     let costPrice = menuItem.ingredients.reduce(function (sum, item) {
@@ -21,7 +25,9 @@ let costSum = menu.map(function (menuItem) {
 });
 console.log(costSum);
 
-// 3. 
+
+// 4.
+console.log('4. Определите, есть ли в меню хоть одно вегетарианское блюдо, используя "some"'); 
 
 const nonVeganIng = ["meat", "mutton", "beef", "pork", "sausage", ]
 
@@ -31,3 +37,4 @@ let vegetFood = menu.some(function (menuElem) {
     });
 });
 console.log(vegetFood);
+
