@@ -28,7 +28,8 @@ console.log(costSum);
 // 3.
 console.log(`Отфильтруйте меню по какой-то предельной стоимости (например блюда стоимостью менее 100 рублей).`)
 
-
+let lowCostMenu = menu.filter(menuItem => menuItem.price < 100);
+console.log(lowCostMenu);
 
 // 4.
 console.log('4. Определите, есть ли в меню хоть одно вегетарианское блюдо, используя "some"'); 
