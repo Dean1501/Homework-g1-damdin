@@ -25,6 +25,10 @@ let costSum = menu.map(function (menuItem) {
 });
 console.log(costSum);
 
+// 3.
+console.log(`Отфильтруйте меню по какой-то предельной стоимости (например блюда стоимостью менее 100 рублей).`)
+
+
 
 // 4.
 console.log('4. Определите, есть ли в меню хоть одно вегетарианское блюдо, используя "some"'); 
@@ -39,7 +43,7 @@ let vegetFood = menu.some(function (menuElem) {
 console.log(vegetFood);
 
 // 5.
-console log(`5. Определите, полностью ли у вас вегетарианское меню с помощью "every".`);
+console.log(`5. Определите, полностью ли у вас вегетарианское меню с помощью "every".`);
 
 let vegetMenu = menu.every(function (menuElem) {
     return menuElem.ingredients.every(function (ingredient){
