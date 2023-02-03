@@ -38,3 +38,12 @@ let vegetFood = menu.some(function (menuElem) {
 });
 console.log(vegetFood);
 
+// 5.
+console log(`5. Определите, полностью ли у вас вегетарианское меню с помощью "every".`);
+
+let vegetMenu = menu.every(function (menuElem) {
+    return menuElem.ingredients.every(function (ingredient){
+        return !nonVeganIng.includes(ingredient);
+    })
+})
+console.log(vegetmenu);
