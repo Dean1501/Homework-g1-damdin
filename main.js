@@ -50,4 +50,4 @@ let vegetMenu = menu.every(function (menuElem) {
         return !nonVeganIng.includes(ingredient);
     })
 })
-console.log(vegetmenu);
+console.log(vegetMenu);
