@@ -25,6 +25,9 @@ let menu = fetch("menu.json")
             let costPrice = menuItem.ingredients.reduce((sum, item) => {
                 return sum + ingredientsPrice[item]
             }, 0);
-            console.log(costSum)
+            let newMenuItem = Object.assign({}, menuItem);
+            newMenuItem.cost = costPrice;
+            return newMenuItem;
         });
+        console.log(costSum);
     }) ;
