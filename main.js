@@ -2,7 +2,7 @@ setTimeout(() => {
     console.log("start");
 }, 7000);
 
-let menu = fetch("*/menu.json")
+let menu = fetch("menu.json")
     .then((response) => response.json)
     .then((data) => console.log(data));
     setTimeout(() => {
