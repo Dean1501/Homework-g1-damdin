@@ -20,7 +20,7 @@ let menu = fetch("menu.json")
             console.log(costPrice);
         });
     })
-    .then((costSum) => {
+    .then((costSumFunc) => {
         let costSum = menu.map((menuItem) => {
             let costPrice = menuItem.ingredients.reduce((sum, item) => {
                 return sum + ingredientsPrice[item]
