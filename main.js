@@ -5,7 +5,7 @@ let menu = fetch("menu.json")
         console.log(menu)
     })
     .then(async (ingredientsPrice) => {
-        response = fetch("ingredientsPrice.json");
+        const response = await fetch("ingredientsPrice.json");
         ingredientsPrice = response.json();
         console.log(ingredientsPrice);
     })
