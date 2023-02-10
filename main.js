@@ -8,8 +8,8 @@ let menu = fetch("menu.json")
         return fetch("ingredientsPrice.json")
             .then((response) => response.json())
             .then((price) => {
-                ingredientsPrice = price;
-                console.log(ingredientsPrice);
+                price = ingredientsPrice;
+                console.log(price);
             });
     })
     .then((costPrice) => {
