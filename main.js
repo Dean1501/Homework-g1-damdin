@@ -10,8 +10,8 @@ let menu = fetch("menu.json")
         console.log(ingredientsPrice);
     })
     .then((costPrice) => {
-        menu.forEach((element) => {
-            let costPrice = element.ingredients.reduce((sum, item) => {
+        menu.forEach(async (element) => {
+            let costPrice = await element.ingredients.reduce((sum, item) => {
                 return sum + ingredientsPrice[item]
             }, 0)
             console.log(costPrice);
