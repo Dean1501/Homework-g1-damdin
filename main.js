@@ -5,7 +5,7 @@ let menu = fetch("menu.json")
         console.log(menu)
     })
     .then((ingPrice) => {
-        return fetch("ingredientsPrice.json()")
+        return fetch("ingredientsPrice.json")
             .then((response) => response.json())
             .then((data) => {
                 ingPrice = data;
