@@ -4,13 +4,11 @@ let menu = fetch("menu.json")
         menu = data;
         console.log(menu)
     })
-    .then((ingPrice) => {
-        return fetch("ingredientsPrice.json")
-            .then((response) => response.json())
-            .then((data) => {
-                ingPrice = data;
-                console.log(ingPrice)
-            });
+    .then(async (ingPrice) => {
+        const response = await fetch("ingredientsPrice.json");
+        const data = await response.json();
+        ingPrice = data;
+        console.log(ingPrice);
     })
     .then((costPrice) => {
         menu.forEach((element) => {
