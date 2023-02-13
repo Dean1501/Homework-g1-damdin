@@ -4,16 +4,20 @@ let menu = fetch("menu.json")
         menu = data;
         console.log(menu)
     })
-    .then(async (ingredientsPrice) => {
-        response = await fetch("ingredientsPrice.json");
-        let ingredientsPrice = response.json();
-        console.log(ingredientsPrice);
+    .then((ingPrice) => {
+        return fetch("ingredientsPrice.json")
+            .then((response) => response.json())
+            .then((ingPrice) => {
+                ingredientsPrice = ingPrice;
+                console.log(ingredientsPrice)
+            });
     })
     .then((costPrice) => {
-        menu.forEach(async (element) => {
-            let costPrice = await element.ingredients.reduce((sum, item) => {
+        menu.forEach((element) => {
+            let cost = element.ingredients.reduce((sum, item) => {
                 return sum + ingredientsPrice[item]
             }, 0)
+            costPrice = cost;
             console.log(costPrice);
         });
     })
@@ -21,10 +25,11 @@ let menu = fetch("menu.json")
         let costSum = menu.map((menuItem) => {
             let costPrice = menuItem.ingredients.reduce((sum, item) => {
                 return sum + ingredientsPrice[item]
-            }, 0);
+            }, 0)
             let newMenuItem = Object.assign({}, menuItem);
             newMenuItem.cost = costPrice;
             return newMenuItem;
+            costSumFunc = costSum;
         });
-        console.log(costSum);
+        console.log(costSum)
     });
