@@ -4,12 +4,12 @@ let menu = fetch("menu.json")
         menu = data;
         console.log(menu)
     })
-    .then((ingPrice) => {
-        return fetch("ingredientsPrice.json")
-            .then((response) => response.json())
-            .then((ingPrice) => {
-                ingredientsPrice = ingPrice;
-                console.log(ingredientsPrice)
+    .then((price) => {
+        return ingredientsPrice.json()
+            .then(response => console.log(response))
+            .then((price) => {
+                ingredientsPrice = price;
+                console.log(price)
             });
     })
     .then((costPrice) => {
