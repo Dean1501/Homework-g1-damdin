@@ -15,7 +15,7 @@ let menu = fetch("menu.json")
     .then((costPrice) => {
         menu.forEach((element) => {
             let cost = element.ingredients.reduce((sum, item) => {
-                return sum + ingredientsPrice[item]
+                return sum + ingPrice[item]
             }, 0)
             costPrice = cost;
             console.log(costPrice);
@@ -24,7 +24,7 @@ let menu = fetch("menu.json")
     .then((costSumFunc) => {
         let costSum = menu.map((menuItem) => {
             let costPrice = menuItem.ingredients.reduce((sum, item) => {
-                return sum + ingredientsPrice[item]
+                return sum + ingPrice[item]
             }, 0)
             let newMenuItem = Object.assign({}, menuItem);
             newMenuItem.cost = costPrice;
