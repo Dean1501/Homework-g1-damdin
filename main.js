@@ -1,3 +1,7 @@
+setTimeout(() => {
+    console.log("start");
+}, 3000);
+
 let menu = fetch("menu.json")
     .then((response) => response.json())
     .then((data) => {
@@ -8,6 +12,7 @@ let menu = fetch("menu.json")
         const response = await fetch("ingredientsPrice.json");
         const data = await response.json();
         ingPrice = data;
+        return ingPrice;
         console.log(ingPrice);
     })
     .then((costPrice) => {
