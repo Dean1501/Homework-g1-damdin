@@ -2,7 +2,12 @@ setTimeout(() => {
     console.log("start");
 }, 3000);
 
-let menu = fetch("menu.json")
+let menu = fetch("menu.json", {
+    method: POST,
+    headers: {
+        "Content-type": "application/json",
+    },
+})
     .then((response) => response.json())
     .then((data) => {
         menu = data;
@@ -10,7 +15,7 @@ let menu = fetch("menu.json")
     })
     .then((ingPrice) => {
         return fetch("ingredientsPrice.json")
-            .then((res) = res.json())
+            .then((res) = response.json())
             .then((data) => {
                 ingPrice = data;
                 console.log(ingPrice);
