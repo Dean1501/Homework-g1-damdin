@@ -1,15 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-
-const app = express();
-
-app.use(cors());
-
 setTimeout(() => {
     console.log("start");
 }, 3000);
 
-let menu = fetch("menu.json", {
+let menu;
+
+fetch("menu.json", {
     headers: {
         "Content-type": "application/json",
         method: "GET",
@@ -23,30 +18,22 @@ let menu = fetch("menu.json", {
     })
     .then((ingPrice) => {
         return fetch("ingredientsPrice.json")
-            .then((res) = response.json())
+            .then((res) => res.json())
             .then((data) => {
                 ingPrice = data;
                 console.log(ingPrice);
+                return ingPrice;
             });
     })
-    .then((costPrice) => {
-        menu.forEach((element) => {
+    .then((ingPrice) => {
+        return menu.map((element) => {
             let cost = element.ingredients.reduce((sum, item) => {
                 return sum + ingPrice[item]
             }, 0)
-            costPrice = cost;
-            console.log(costPrice);
+            return cost;
         });
     })
     .then((costSumFunc) => {
-        let costSum = menu.map((menuItem) => {
-            let costPrice = menuItem.ingredients.reduce((sum, item) => {
-                return sum + ingPrice[item]
-            }, 0)
-            let newMenuItem = Object.assign({}, menuItem);
-            newMenuItem.cost = costPrice;
-            return newMenuItem;
-            costSumFunc = costSum;
-        });
-        console.log(costSum)
+        console.log(costSumFunc);
     });
+    
