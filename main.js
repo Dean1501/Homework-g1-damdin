@@ -1,3 +1,10 @@
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+
+app.use(cors());
+
 setTimeout(() => {
     console.log("start");
 }, 3000);
@@ -6,7 +13,7 @@ let menu = fetch("menu.json", {
     headers: {
         "Content-type": "application/json",
         method: "GET",
-        
+
     },
 })
     .then((response) => response.json())
