@@ -3,9 +3,11 @@ setTimeout(() => {
 }, 3000);
 
 let menu = fetch("menu.json", {
-    method: POST,
     headers: {
         "Content-type": "application/json",
+        response.setHeader("Access-Control-Allow-Origin", "*"),
+        response.setHeader("Access-Control-Allow-Methods", "*"),
+        response.setHeader("Access-Control-Allow-Headers", "content-type"),
     },
 })
     .then((response) => response.json())
