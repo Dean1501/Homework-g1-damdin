@@ -14,26 +14,20 @@ fetch("menu.json", {
     .then((response) => response.json())
     .then((data) => {
         menu = data;
-        console.log(menu)
-    })
-    .then((ingPrice) => {
         return fetch("ingredientsPrice.json")
-            .then((res) => res.json())
-            .then((data) => {
-                ingPrice = data;
-                console.log(ingPrice);
-                return ingPrice;
-            });
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        ingPrice = data;
+        console.log(ingPrice);
+        return ingPrice;
     })
     .then((ingPrice) => {
-        return menu.map((element) => {
+        let result = menu.map((element) => {
             let cost = element.ingredients.reduce((sum, item) => {
                 return sum + ingPrice[item]
             }, 0)
             return cost;
         });
+        console.log(result);
     })
-    .then((costSumFunc) => {
-        console.log(costSumFunc);
-    });
-    
