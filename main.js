@@ -3,14 +3,9 @@ setTimeout(() => {
 }, 3000);
 
 let menu;
+let ingPrice;
 
-fetch("menu.json", {
-    headers: {
-        "Content-type": "application/json",
-        method: "GET",
-
-    },
-})
+fetch("menu.json")
     .then((response) => response.json())
     .then((data) => {
         menu = data;
