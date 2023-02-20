@@ -9,6 +9,7 @@ fetch("menu.json")
     .then((response) => response.json())
     .then((data) => {
         menu = data;
+        console.log(menu);
         return fetch("ingredientsPrice.json")
     })
     .then((res) => res.json())
