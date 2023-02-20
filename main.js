@@ -5,9 +5,8 @@ setTimeout(() => {
 let menu = fetch("menu.json", {
     headers: {
         "Content-type": "application/json",
-        response.setHeader("Access-Control-Allow-Origin", "*"),
-        response.setHeader("Access-Control-Allow-Methods", "*"),
-        response.setHeader("Access-Control-Allow-Headers", "content-type"),
+        method: "GET",
+        
     },
 })
     .then((response) => response.json())
