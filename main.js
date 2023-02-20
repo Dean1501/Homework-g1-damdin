@@ -8,12 +8,13 @@ let menu = fetch("menu.json")
         menu = data;
         console.log(menu)
     })
-    .then(async (ingPrice) => {
-        const response = await fetch("ingredientsPrice.json");
-        const data = await response.json();
-        ingPrice = data;
-        return ingPrice;
-        console.log(ingPrice);
+    .then((ingPrice) => {
+        return fetch("ingredientsPrice.json")
+            .then((res) = res.json())
+            .then((data) => {
+                ingPrice = data;
+                console.log(ingPrice);
+            });
     })
     .then((costPrice) => {
         menu.forEach((element) => {
